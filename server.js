@@ -1,5 +1,4 @@
-const orm = require("./config/orm")
-const connection = require("./config/connection")
+
 const express = require("express");
 const handlebars = require("express-handlebars");
 // const mySQL = require("mysql");
@@ -8,14 +7,17 @@ const app = express();
 
 const port = process.env.PORT || 3003;
 
-const db = require("./models");
-
 
 
 app.use(express.static("public"));
 
 app.use(express.urlencoded({extended: true}));
 
+const controller = require("./controllers/burgers_controller");
+
+// how to link to server
+// server links to controller, contyroller links to models, models links to ORM's, orm links to connection
+app.use(controller);
 
 // expHNDLBRS
 app.engine("handlebars", handlebars({ defaultLayout: "main"}));

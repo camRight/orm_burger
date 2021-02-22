@@ -1,12 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+<div class="container">
+    <div class="row">
+    <div class="col">
+        <ul>
+            {{#each burgers}}
+                    {{#unless devoured}}
+                    <li>{{burger_name}} <button data-id={{id}} class="devour_btn"> Devour </button></li>
+                    {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+    <div class="col">
+            {{#each burgers}}
+                {{#if devoured}}
+                <li>{{burger_name}}</li>
+                {{/if}}
+            {{/each}}
+    </div>
+    </div>
+</div>
