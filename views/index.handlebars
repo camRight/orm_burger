@@ -1,39 +1,45 @@
-<div class="page_container col-md-12">
-<div class="container">
-    <div class="jumbotron jumbotron-fluid">
-        <h1 class="display-3 text-center">Eat-Da-Burger</h1>
-        <img src="https://p1.hiclipart.com/preview/269/545/267/hamburger-food-junk-food-fast-food-buffalo-burger-dish-cheeseburger-burger-king-premium-burgers-png-clipart-thumbnail.jpg" alt="A burger.">
+<div class="col-md-12">
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <h1 class="display-3 text-center">Eat-Da-Burger</h1>
+            <img class="mx-auto d-block" src="http://placekitten.com/200/200" alt="A burger.">
+        </div>
     </div>
-</div>
 
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <ul>
-                {{#each burgers}}
-                {{#unless devoured}}
-                <li>{{burger_name}} <button data-id={{id}} class="devour_btn btn btn-secondary"> Devour </button></li>
-                {{/unless}}
-                {{/each}}
-            </ul>
+    <div class="container">
+        <div class="row">
+                <div class="col-md-6">
+                    <ul>
+                        {{#each burgers}}
+                        {{#unless devoured}}
+                        <li>{{burger_name}} <button data-id={{id}} class="devour_btn btn btn-secondary"> Devour
+                            </button>
+                        </li>
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    <li>{{burger_name}}</li>
+                    {{/if}}
+                    {{/each}}
+                </div>
+
         </div>
-        <div class="col">
-            {{#each burgers}}
-            {{#if devoured}}
-            <li>{{burger_name}}</li>
-            {{/if}}
-            {{/each}}
-        </div>
-    </div>
-    <div class="container col-md-6 bg-secondary">
-        <h4>Add a burger to devour!</h4>
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Cheeseburger" aria-label="Cheeseburger"
-                aria-describedby="basic-addon2">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button">Button</button>
+            <div class="container col-md-6 bg-secondary">
+                <div class="row">
+                <h4>Add a burger to devour!</h4>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Cheeseburger" aria-label="Cheeseburger"
+                        aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button">Button</button>
+                    </div>
+                </div>
             </div>
-        </div>
+            </div>
+
     </div>
-</div>
 </div>
