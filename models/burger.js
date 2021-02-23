@@ -5,15 +5,15 @@ const burger = {
             cbController(burgerData)
         });
     },
-    insertOne: function (burgerObject,  cbController) {
+    insertOne: function (burgerObject, cbController) {
         orm.insertOne("burgers", burgerObject, function (appendBurger) {
-            
+
             cbController(appendBurger)
         });
-    }, updateOne:function(conditionObject, updateObject, cbController) {
-        orm.updateOne("burgers", conditionObject, updateObject, function(burgerData) {
+    }, updateOne: function (conditionObject, updateObject, cbController) {
+        orm.updateOne("burgers", conditionObject, updateObject, function (burgerData) {
             cbController(burgerData)
-        })
+        });
     }
 };
 

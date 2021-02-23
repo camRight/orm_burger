@@ -15,7 +15,7 @@ const orm = {
     insertOne: async function (tableName, burgerObject, cbModel) {
         const appendBurger = await query(`INSERT INTO ${tableName} SET ?`,
             burgerObject
-        )
+        );
         cbModel(appendBurger);
     },
     updateOne: async function (tableName, conditionObject, updateObject, cbModel) {
