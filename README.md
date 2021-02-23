@@ -10,3 +10,6 @@ This burger web application seeks to create an MVC structured database that upda
 
 TODO: deploy to heroku with JAWSDB
 
+## License 
+
+## Directions for Use
