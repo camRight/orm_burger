@@ -5,7 +5,7 @@ const connection = require("./connection");
 
 const util = require("util");
 const query = util.promisify(connection.query).bind(connection);
-// const router = require("express").router
+
 const orm = {
     selectAll: async function (tableName, cbModel) {
         const burgerData = await query(`SELECT * FROM ${tableName}`)
