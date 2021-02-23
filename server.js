@@ -7,11 +7,12 @@ const app = express();
 
 const port = process.env.PORT || 3003;
 
+const path = require("path")
 
+app.use(express.json());
+app.use(express.static(path.join(__dirname, "/public")));
 
-app.use(express.static("public"));
-
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 
 const controller = require("./controllers/burgers_controller");
 
@@ -20,12 +21,12 @@ const controller = require("./controllers/burgers_controller");
 app.use(controller);
 
 // expHNDLBRS
-app.engine("handlebars", handlebars({ defaultLayout: "main"}));
+app.engine("handlebars", handlebars({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 
 
-app.listen(port, function() {
-    console.log("app is listening on PORT" +port)
+app.listen(port, function () {
+    console.log("app is listening on PORT" + port)
 });
 
