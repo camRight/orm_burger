@@ -9,13 +9,13 @@ router.get("/", function (req, res) {
 });
 
 router.post("/", function (req, res) {
-    console.log(req.body)
+    console.log(req.body);
 
     // {burger_name.... is the burgerObject}
     burger.insertOne({ burger_name: req.body.burger_name, devoured: false }, function (appendBurger) {
 
         // does a get request
-        res.redirect("/")
+        res.redirect("/");
     })
 })
 
@@ -26,9 +26,8 @@ router.put("/:id", function (req, res) {
         devoured: true
     }, function (burgerData) {
         res.json(burgerData)
-    })
-})
-
+    });
+});
 
 
 module.exports = router;
