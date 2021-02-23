@@ -17,11 +17,11 @@ const orm = {
             burgerObject
         )
         cbModel(appendBurger);
-    }, 
+    },
     updateOne: async function (tableName, conditionObject, updateObject, cbModel) {
-         const burgerData = await query(`UPDATE ${tableName} SET ? WHERE ? `, [updateObject, conditionObject])
-            cbModel(burgerData);
-        }
+        const burgerData = await query(`UPDATE ${tableName} SET ? WHERE ? `, [updateObject, conditionObject])
+        cbModel(burgerData);
+    }
 }
 
 
