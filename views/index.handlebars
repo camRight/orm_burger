@@ -8,38 +8,40 @@
 
     <div class="container">
         <div class="row">
-                <div class="col-md-6">
-                    <ul>
-                        {{#each burgers}}
-                        {{#unless devoured}}
-                        <li>{{burger_name}} <button data-id={{id}} class="devour_btn btn btn-secondary"> Devour
-                            </button>
-                        </li>
-                        {{/unless}}
-                        {{/each}}
-                    </ul>
-                </div>
-                <div class="col-md-6">
+            <div class="col-md-6">
+                <ul>
                     {{#each burgers}}
-                    {{#if devoured}}
-                    <li>{{burger_name}}</li>
-                    {{/if}}
+                    {{#unless devoured}}
+                    <li>{{burger_name}} <button data-id={{id}} class="btn_devour btn btn-secondary"> Devour
+                        </button>
+                    </li>
+                    {{/unless}}
                     {{/each}}
-                </div>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                {{#each burgers}}
+                {{#if devoured}}
+                <li>{{burger_name}}</li>
+                {{/if}}
+                {{/each}}
+            </div>
 
         </div>
-            <div class="container col-md-6 bg-secondary">
-                <div class="row">
+        <div class="container col-md-6 bg-secondary">
+            <div class="row">
                 <h4>Add a burger to devour!</h4>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Cheeseburger" aria-label="Cheeseburger"
-                        aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" type="button">Button</button>
-                    </div>
+                    <form action="/" method="POST">
+                        <input type="text" name="burger_name" class="form-control" placeholder="Cheeseburger" aria-label="Cheeseburger"
+                            aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <input class="btn btn-primary" type="submit">Button</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-            </div>
+        </div>
 
     </div>
 </div>
