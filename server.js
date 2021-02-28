@@ -2,12 +2,14 @@
 const express = require("express");
 const handlebars = require("express-handlebars");
 const mysql = require("mysql");
+const dotenv = require("dotenv").config();
+const path = require("path")
 
 const app = express();
 const connection = mysql.createConnection(process.env.JAWSDB_URL);
 const port = connection || 3003;
 
-const path = require("path")
+
 
 app.use(express.json());
 app.use(express.static("public"));
