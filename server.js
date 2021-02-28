@@ -1,11 +1,11 @@
 
 const express = require("express");
 const handlebars = require("express-handlebars");
-// const mySQL = require("mysql");
+const mysql = require("mysql");
 
 const app = express();
-
-const port = process.env.PORT || 3003;
+const connection = mysql.createConnection(process.env.JAWSDB_URL);
+const port = connection || 3003;
 
 const path = require("path")
 
