@@ -6,7 +6,7 @@ const dotenv = require("dotenv").config();
 const path = require("path")
 
 const app = express();
-const connection = mysql.createConnection(process.env.JAWSDB_URL).connection();
+const connection = mysql.createConnection(process.env.JAWSDB_URL).connect();
 const port = connection || 3003;
 
 // if (connection) {
