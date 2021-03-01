@@ -1,3 +1,9 @@
+const env = process.env.NODE_ENV || 'development';
+const config = require(__dirname + '/../config/config.json')[env];
+
+
+
+
 const devour_btn = document.querySelectorAll(".btn_devour");
 
 
