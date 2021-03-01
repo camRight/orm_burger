@@ -6,10 +6,12 @@ const dotenv = require("dotenv").config();
 const path = require("path")
 
 const app = express();
-const connection = mysql.createConnection(process.env.JAWSDB_URL);
-const port = process.env.JAWSDB_URL || 3003;
+const connection = mysql.createConnection(process.env.JAWSDB_URL).connection();
+const port = connection || 3003;
 
-
+// if (connection) {
+//     port.connect();
+// };
 
 app.use(express.json());
 app.use(express.static("public"));
