@@ -6,7 +6,7 @@ const path = require("path")
 
 const app = express();
 // const connection = mysql.createConnection(process.env.JAWSDB_URL);
-const port = process.env.JAWSDB_URL || 3003;
+const port = process.env.PORT || 3003;
 
 // if (connection) {
 //     port.connect();
