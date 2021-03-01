@@ -2,11 +2,11 @@ const mysql = require("mysql");
 
 
 const connection = mysql.createConnection({
-    Host: "l0ebsc9jituxzmts.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    Username: "rmhvnb859kt53s0m",
-    Password: "ilcseuznxvxlm8te",
-    Port: 3306,
-    Database: "ksexsn9j8pte2082",
+    host: "l0ebsc9jituxzmts.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    username: "rmhvnb859kt53s0m",
+    password: "ilcseuznxvxlm8te",
+    port: 3306,
+    database: "ksexsn9j8pte2082",
 });
 
 

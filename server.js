@@ -1,22 +1,20 @@
 
 const express = require("express");
 const handlebars = require("express-handlebars");
-const mysql = require("mysql");
-const path = require("path")
+
 
 const app = express();
-// const connection = mysql.createConnection(process.env.JAWSDB_URL);
+
 const port = process.env.PORT || 3003;
 
 app.use(express.json());
 app.use(express.static("public"));
-
 app.use(express.urlencoded({ extended: true }));
 
 const controller = require("./controllers/burgers_controller");
 
-// how to link to server
-// server links to controller, contyroller links to models, models links to ORM's, orm links to connection
+// how to link to serve:
+// server links to controller, controller links to models, models links to ORM's, orm links to connection
 app.use(controller);
 
 // expHNDLBRS
