@@ -2,7 +2,6 @@
 const express = require("express");
 const handlebars = require("express-handlebars");
 const mysql = require("mysql");
-const dotenv = require("dotenv").config();
 const path = require("path")
 
 const app = express();
