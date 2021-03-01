@@ -8,10 +8,6 @@ const app = express();
 // const connection = mysql.createConnection(process.env.JAWSDB_URL);
 const port = process.env.PORT || 3003;
 
-// if (connection) {
-//     port.connect();
-// };
-
 app.use(express.json());
 app.use(express.static("public"));
 
