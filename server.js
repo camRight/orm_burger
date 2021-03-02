@@ -28,4 +28,4 @@ app.listen(PORT, function () {
 });
 
 // it's a boomerange effect between controller, model, ORM... ORM gets resuslt of mysql and brings it back to model and 
-// controller and controller puts it into the view
+// controller and controller puts it into the views
