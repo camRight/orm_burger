@@ -5,7 +5,7 @@ const handlebars = require("express-handlebars");
 
 const app = express();
 
-const port = process.env.PORT || 3003;
+const PORT = process.env.PORT || 3003;
 
 app.use(express.json());
 app.use(express.static("public"));
@@ -23,8 +23,8 @@ app.set("view engine", "handlebars");
 
 
 
-app.listen(port, function () {
-    console.log("app is listening on PORT" + port)
+app.listen(PORT, function () {
+    console.log("App is listening on http://localhost:" + PORT)
 });
 
 // it's a boomerange effect between controller, model, ORM... ORM gets resuslt of mysql and brings it back to model and 
