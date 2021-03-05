@@ -11,10 +11,15 @@ This burger web application seeks to create an MVC structured database that upda
 - Util
 - Pure vanilla Javascript
 
-TODO: deploy to heroku with JAWSDB
 
 ## License 
 
 ## Directions for Use
+
+## Links
+
+- Repo: https://github.com/camRight/orm_burger
+
+- Live Deployment: https://burger-orm-mvc.herokuapp.com/
 
 
